@@ -1,0 +1,56 @@
+### Get Users (requires Authorization)
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE5LCJuYW1lIjoia2l3IiwiZW1haWwiOiJraXdAZ21haWwuY29tIiwiaWF0IjoxNzQ4MzA1Mjk0LCJleHAiOjE3NDgzMDUzNDR9.BG6qSfkQBTrLFS6YkISw2QTVxwSgF1cz--qeBWKdMmQ
+
+###
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name": "kiw", 
+  "email": "kiw@gmail.com",
+  "password": "k", 
+  "confPassword": "k"
+}
+
+
+
+
+
+### Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kiw@gmail.com",
+    "password": "k"
+}
+
+### Refresh Token
+GET http:/localhost:5000/profile
+
+
+###
+DELETE  http://localhost:5000/logout
+
+###
+POST http://localhost:5000/order
+Content-Type: application/json
+
+{
+  "userId": 19,
+  "productId": 2,
+  "customerName": "Budi Santoso",
+  "email": "budi@example.com",
+  "phone": "08123456789",
+  "tanggalSewa": "2025-06-01",
+  "tanggalKembali": "2025-06-03",
+  "metodePembayaran": "Transfer Bank",
+  "catatan": "Tolong kirim pagi hari.",
+  "durasi": 2,
+  "quantity": 1,
+  "totalHarga": 200000
+}
+
+
